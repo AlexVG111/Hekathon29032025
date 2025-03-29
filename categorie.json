@@ -1,0 +1,5 @@
+{
+    "animals": ["cat", "dog", "elephant", "giraffe", "monkey"],
+    "colors": ["red", "blue", "green", "yellow", "black"],
+    "foods": ["apple", "pizza", "rice", "bread", "sushi"]
+}

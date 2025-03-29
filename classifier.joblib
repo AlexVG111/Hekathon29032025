@@ -1,0 +1,11 @@
+from sklearn.linear_model import LogisticRegression
+from joblib import dump
+
+# Prepare training data
+X_train = [embeddings[word] for word in sum(categories.values(), [])]
+y_train = [category for category, words in categories.items() for word in words]
+
+# Train and save
+model = LogisticRegression(max_iter=1000)
+model.fit(X_train, y_train)
+dump(model, 'classifier.joblib')
