@@ -2,7 +2,7 @@ import requests
 from time import sleep
 import random
 
-host = ""
+host = "http://172.18.4.158:8000"
 post_url = f"{host}/submit-word"
 get_url = f"{host}/get-word"
 status_url = f"{host}/status"
@@ -12,7 +12,7 @@ NUM_ROUNDS = 5
 
 def what_beats(word):
 
-    return 21 
+    return 21
 
 def play_game(player_id):
 
@@ -34,3 +34,6 @@ def play_game(player_id):
         data = {"player_id": player_id, "word_id": choosen_word, "round_id": round_id}
         response = requests.post(post_url, json=data)
         print(response.json())
+
+
+play_game("GHCkRhmlz0")
